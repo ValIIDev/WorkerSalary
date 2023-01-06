@@ -83,7 +83,9 @@ else {
         bestResult = max(bestResult, worker.salary);
     }
     cout << "= Largest salary: " << bestResult << endl;
+      
 cout << "=======================================" << endl;
+      
     // Find all salaries better than average
     cout << "Salaries better than average:" << endl;
     for (const auto& worker : workers)
@@ -96,6 +98,7 @@ cout << "=======================================" << endl;
         }
     }
 cout << "=======================================" << endl;
+      
   // Find all salaries better than 2000
     cout << "Salaries better than 2000:" << endl;
     for (const auto& worker : workers)
@@ -107,27 +110,9 @@ cout << "=======================================" << endl;
           
         }
     }
-cout << "=======================================" << endl;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       
+cout << "=======================================" << endl;   
+      input.close();  // Close the file stream
   }    
 else
     {
