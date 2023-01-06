@@ -59,7 +59,7 @@ else {
     cout << "Data file contains info" << endl;
 }
 
-// Calculate the average mark
+    // Calculate the average mark
     double total = 0;
     for (const auto& worker : workers)
     {
@@ -68,7 +68,7 @@ else {
     double average = total / workers.size();
     cout << "= Average salary: " << average << endl;
 
-// Find the lowest salary
+    // Find the lowest salary
     int worstResult = workers[0].salary;
     for (const auto& worker : workers)
     {
@@ -76,7 +76,7 @@ else {
     }
     cout << "= Lowest salary: " << worstResult << endl;
 
-// Find the largest salary
+    // Find the largest salary
     int bestResult = workers[0].salary;
     for (const auto& worker : workers)
     {
@@ -95,8 +95,19 @@ cout << "=======================================" << endl;
           
         }
     }
-
-
+cout << "=======================================" << endl;
+  // Find all salaries better than 2000
+    cout << "Salaries better than 2000:" << endl;
+    for (const auto& worker : workers)
+    {
+        if (worker.salary > 2000)
+        {
+            cout << "" << endl;
+            cout << worker.name << " " << worker.salary << endl;
+          
+        }
+    }
+cout << "=======================================" << endl;
 
 
 
