@@ -1,3 +1,4 @@
+
 #include <algorithm>
 #include <fstream>
 #include <iostream>
@@ -13,22 +14,29 @@ struct Worker {
 };
 
 int main() {
-  // Prompt the user to enter their username and password
-  cout << "Enter your username: ";
-  string username;
-  getline(cin, username);
-  cout << "Enter your password: ";
-  string password;
-  getline(cin, password);
+// Open the file "data.txt" for reading
+ifstream input("data.txt");
 
-  // Check the login
-  if (username == "VVK" && password == "VVK") {
+string username;
+string password;
+
+// Read the username and password from the first two lines of the file
+getline(input, username);
+getline(input, password);
+
+// Prompt the user to enter their username and password
+cout << "Enter your username: ";
+string enteredUsername;
+getline(cin, enteredUsername);
+cout << "Enter your password: ";
+string enteredPassword;
+getline(cin, enteredPassword);
+
+// Check the login
+if (enteredUsername == username && enteredPassword == password)
+{
     cout << "Login successful!" << endl;
-
-    cout << "=======================================" << endl;
-    // Open the file "data.txt" for reading
-    ifstream input("data.txt");
-
+    cout << "=======================================" << endl;  
     // Read the data from the file into a vector of worker objects
     vector<Worker> workers;
     string line;
