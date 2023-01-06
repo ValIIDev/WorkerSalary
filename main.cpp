@@ -32,12 +32,12 @@ int main()
     // Open the file "data.txt" for reading
     ifstream input("data.txt");
 
-// Read the data from the file into a vector of Student objects
+// Read the data from the file into a vector of worker objects
 vector<Worker> workers;
 string line;
 while (getline(input, line))
 {
-    // Use a stringstream to extract the name and mark from the line
+    // Use a stringstream to extract the name and salaryu from the line
     stringstream ss(line);
     string name;
     int salary;
@@ -68,8 +68,33 @@ else {
     double average = total / workers.size();
     cout << "= Average salary: " << average << endl;
 
+// Find the lowest salary
+    int worstResult = workers[0].salary;
+    for (const auto& worker : workers)
+    {
+        worstResult = min(worstResult, worker.salary);
+    }
+    cout << "= Lowest salary: " << worstResult << endl;
 
-
+// Find the largest salary
+    int bestResult = workers[0].salary;
+    for (const auto& worker : workers)
+    {
+        bestResult = max(bestResult, worker.salary);
+    }
+    cout << "= Largest salary: " << bestResult << endl;
+cout << "=======================================" << endl;
+    // Find all salaries better than average
+    cout << "Salaries better than average:" << endl;
+    for (const auto& worker : workers)
+    {
+        if (worker.salary > average)
+        {
+            cout << "" << endl;
+            cout << worker.name << " " << worker.salary << endl;
+          
+        }
+    }
 
 
 
