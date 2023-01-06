@@ -1,0 +1,8 @@
+Peter
+Peter123
+5
+John 6000
+Sarah 3000
+Thomas 2900
+Jake 1450
+Jane 1220
