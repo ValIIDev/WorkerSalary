@@ -1,4 +1,5 @@
-
+//Password and username are grabbed from data.txt
+//results are shown on console output.
 #include <algorithm>
 #include <fstream>
 #include <iostream>
